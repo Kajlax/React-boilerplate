@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Icon, Segment } from "semantic-ui-react";
+import { Grid, Header, Icon, Segment } from "semantic-ui-react";
 
 const segmentStyle = {
   position: "fixed",
@@ -15,12 +15,26 @@ class Footer extends React.PureComponent {
     return (
       <Segment inverted style={segmentStyle}>
         <div className="ui center aligned container">
-          <Header as="h5" inverted>
-            &copy; Sovellus, 2018.
-          </Header>
-          <Icon link name="facebook square" size="large" />
-          <Icon link name="instagram" size="large" />
-          <Icon link name="twitter" size="large" />
+          <Grid columns={3} divided>
+            <Grid.Row>
+              <Grid.Column>
+                <Header as="h5" inverted>
+                  Sovellus, 2018
+                  <br /> info@sovellus.fi
+                </Header>
+              </Grid.Column>
+              <Grid.Column>
+                <Header as="h5" inverted>
+                  Katu 1<br /> 00000, Helsinki
+                </Header>
+              </Grid.Column>
+              <Grid.Column>
+                <Icon link name="facebook square" size="large" />
+                <Icon link name="instagram" size="large" />
+                <Icon link name="twitter" size="large" />
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
         </div>
       </Segment>
     );
