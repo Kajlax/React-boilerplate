@@ -5,7 +5,6 @@ const segmentStyle = {
   position: "fixed",
   left: 0,
   bottom: 0,
-  height: 80,
   width: "100%",
   borderRadius: 0
 };
@@ -15,7 +14,7 @@ class Footer extends React.PureComponent {
     return (
       <Segment inverted style={segmentStyle}>
         <div className="ui center aligned container">
-          <Grid columns={3} divided>
+          <Grid stackable columns={3}>
             <Grid.Row>
               <Grid.Column>
                 <Header as="h5" inverted>
